@@ -19,9 +19,19 @@ public class MainActivity extends AppCompatActivity  {
     private Button btneight;
     private Button btnnine;
     private Button btnzero;
+    private Button btnplus;
+    private Button btnminus;
+    private Button btnmultiply;
+    private Button btndivide;
+    private Button btndischarge;
+    private Button btnequally;
 
     TextView textView;
     StringBuilder result = new StringBuilder();
+
+    String symbol = "";
+    int firstNum = 0;
+    int seconNum = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +39,81 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
 
         textView = findViewById(R.id.scoreboard);
+
+        btnplus = findViewById(R.id.plus);
+        btnplus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            symbol = "+";
+            firstNum = Integer.parseInt(result.toString());
+            result.delete(0,result.length());
+            textView.setText("+");
+            }
+        });
+        btnminus = findViewById(R.id.minus);
+        btnminus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                symbol = "-";
+                firstNum = Integer.parseInt(result.toString());
+                result.delete(0,result.length());
+                textView.setText("-");
+            }
+        });
+        btnmultiply = findViewById(R.id.multiply);
+        btnmultiply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                symbol = "*";
+                firstNum = Integer.parseInt(result.toString());
+                result.delete(0,result.length());
+                textView.setText("*");
+            }
+        });
+
+        btndivide = findViewById(R.id.divide);
+        btndivide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                symbol = "÷";
+                firstNum = Integer.parseInt(result.toString());
+                result.delete(0,result.length());
+                textView.setText("÷");
+            }
+        });
+        btndischarge = findViewById(R.id.discharge);
+        btndischarge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                symbol = "";
+                firstNum = 0;
+                seconNum = 0;
+                result.delete(0,result.length());
+                textView.setText("");
+            }
+        });
+
+
+
+        btnequally = findViewById(R.id.equally);
+        btnequally.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                seconNum = Integer.parseInt(result.toString());
+                textView.setText(String.valueOf(calculate(symbol,firstNum,seconNum)));
+                seconNum = calculate(symbol,firstNum,seconNum);
+
+
+//                result.delete(0,result.length());
+
+            }
+        });
+
+
+
+
+
 
         btnOne = findViewById(R.id.one);
         btnOne.setOnClickListener(new View.OnClickListener() {
@@ -112,6 +197,20 @@ public class MainActivity extends AppCompatActivity  {
         });
     }
 
+    public static int calculate(String symbol,int firstNum,int secondNum) {
+        if (symbol.equals("+")) {
+            return firstNum + secondNum;
+        } else if (symbol.equals("-")) {
+            return firstNum - secondNum;
+        } else if (symbol.equals("*")) {
+            return firstNum * secondNum;
+        } else if(symbol.equals("÷")){
+            return firstNum / secondNum;
+        }else{
+            return 0;
+        }
+
+    }
 
 
 

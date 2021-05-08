@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/MyCoolStyle"
     android:background="@drawable/my_fon_calculator"
     tools:context=".MainActivity">
 
@@ -28,11 +30,11 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/scoreboard"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="0dp"
         android:layout_marginHorizontal="4dp"
         android:weightSum="4">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/seven"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,7 +49,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/eight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,7 +63,7 @@
             android:gravity="center"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/button_round"/>
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/nine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -75,7 +77,7 @@
             android:gravity="center"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/button_round"/>
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/divide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -100,7 +102,7 @@
         android:layout_marginHorizontal="4dp"
         android:weightSum="4">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/four"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -115,7 +117,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/five"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -129,7 +131,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/six"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -143,7 +145,7 @@
             android:gravity="center"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/button_round"/>
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/multiply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -167,7 +169,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginHorizontal="4dp"
         android:weightSum="4">
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -181,7 +183,7 @@
             android:gravity="center"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/button_round" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -195,7 +197,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/three"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -209,7 +211,7 @@
             android:gravity="center"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/button_round"/>
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/minus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -233,7 +235,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginHorizontal="4dp"
         android:weightSum="4">
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/discharge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -247,7 +249,7 @@
             android:gravity="center"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/button_round" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/zero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -261,7 +263,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/equally"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -275,7 +277,7 @@
             android:gravity="center"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/button_round"/>
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/plus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
